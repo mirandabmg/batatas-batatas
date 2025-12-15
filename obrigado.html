@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagem Enviada - BATATA'S & BATATA'S</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    .thank-you-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      padding-top: 100px; /* Compensa a navbar fixa */
+      background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+    }
+    
+    .thank-you-content {
+      max-width: 700px;
+      background-color: rgba(26, 26, 26, 0.8);
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      border: 2px solid var(--cor-laranja);
+      box-shadow: 0 10px 40px rgba(255, 165, 0, 0.2);
+    }
+    
+    .thank-you-content h1 {
+      font-size: 3rem;
+      color: var(--cor-laranja);
+      margin-bottom: 1rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .thank-you-content h2 {
+      font-size: 2rem;
+      color: var(--cor-amarelo);
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+    
+    .thank-you-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      color: var(--cor-texto);
+    }
+    
+    .checkmark {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cor-laranja) 0%, var(--cor-amarelo) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      animation: scaleIn 0.5s ease-out;
+      box-shadow: 0 5px 20px rgba(255, 165, 0, 0.4);
+    }
+    
+    .checkmark svg {
+      width: 70px;
+      height: 70px;
+      stroke: var(--cor-fundo);
+      stroke-width: 4;
+      fill: none;
+      animation: drawCheck 0.8s ease-out 0.3s forwards;
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+    
+    @keyframes scaleIn {
+      from {
+        transform: scale(0) rotate(-180deg);
+      }
+      to {
+        transform: scale(1) rotate(0deg);
+      }
+    }
+    
+    @keyframes drawCheck {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    .btn {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      padding: 1rem 2.5rem;
+      box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .thank-you-content h1 {
+        font-size: 2rem;
+      }
+      
+      .thank-you-content h2 {
+        font-size: 1.5rem;
+      }
+      
+      .thank-you-content p {
+        font-size: 1rem;
+      }
+      
+      .checkmark {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .thank-you-content {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Navbar (igual ao site principal) -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="logo-container">
+        <img src="assets/img/logo_navbar.png" alt="Logo Batata's" class="logo-img">
+        <h1 class="logo-text">BATATA'S & BATATA'S</h1>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Início</a></li>
+        <li><a href="index.html#sobre">Sobre Nós</a></li>
+        <li><a href="index.html#sabores">Nossos Sabores</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Conteúdo da página de agradecimento -->
+  <section class="thank-you-section">
+    <div class="thank-you-content">
+      <div class="checkmark">
+        <svg viewBox="0 0 52 52">
+          <polyline points="14 27 22 35 38 19"/>
+        </svg>
+      </div>
+      
+      <h1>MENSAGEM ENVIADA!</h1>
+      <h2>Obrigado pelo contato!</h2>
+      
+      <p>
+        Recebemos sua mensagem com sucesso e nossa equipe entrará em contato 
+        em breve através do email informado.
+      </p>
+      
+      <p>
+        Enquanto isso, que tal conhecer nossos deliciosos sabores de batatas artesanais?
+      </p>
+      
+      <a href="index.html#sabores" class="btn">Ver Nossos Sabores</a>
+      <br><br>
+      <a href="index.html" class="btn" style="background-color: #222; border: 2px solid var(--cor-laranja);">Voltar ao Início</a>
+    </div>
+  </section>
+
+  <!-- Botão WhatsApp (igual ao site principal) -->
+  <a href="https://wa.me/554192327788?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20batatas%20artesanais!" class="whatsapp-float" target="_blank" rel="noopener">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" />
+  </a>
+
+</body>
+</html>
