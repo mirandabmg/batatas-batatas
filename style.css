@@ -134,8 +134,33 @@ section {
   justify-content: center;
   text-align: center;
   padding-top: 80px; /* Compensa a navbar fixa */
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('assets/img/batata.mp4') no-repeat center center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Vídeo de fundo do Hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://res.cloudinary.com/duptqwgje/video/upload/v1765815924/batata_owdssj.mp4') no-repeat center center;
+  background-size: cover;
+  z-index: -2;
+}
+
+/* Overlay escuro sobre o vídeo */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
 }
 
 .hero h2 {
@@ -201,11 +226,6 @@ section {
 }
 
 /* ======================================= */
-/* ❌ BLOCO ANTIGO DO "SABORES" REMOVIDO   */
-/* ======================================= */
-
-
-/* ======================================= */
 /* ✅ NOVOS ESTILOS - SEÇÃO SABORES (MINI-HERO) */
 /* ======================================= */
 .sabores {
@@ -234,10 +254,9 @@ section {
   min-height: 100%;
   width: auto;
   height: auto;
-   /* Atrás do overlay */
+  /* Atrás do overlay */
   object-fit: cover;
-
-  z-index:0;
+  z-index: 0;
 }
 
 /* Overlay escuro (igual ao do Hero) */
@@ -373,12 +392,6 @@ section {
   }
   /* FIM DAS ADIÇÕES RESPONSIVAS */
 
-
-  /* ======================================= */
-  /* ❌ REGRAS RESPONSIVAS ANTIGAS REMOVIDAS  */
-  /* ======================================= */
-
-
   /* ================================================ */
   /* ✅ ADIÇÕES RESPONSIVAS PARA "SABORES" (MINI-HERO) */
   /* ================================================ */
@@ -435,7 +448,6 @@ section {
 }
 .carousel-slide {
   min-width: 100%;
-
   position: relative;
 }
 .carousel-btn {
@@ -449,7 +461,6 @@ section {
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
-
   z-index: 3;
 }
 .carousel-btn.prev { left: 10px; }
@@ -473,60 +484,75 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: 3;
 }
 
 
 /* FORCE FULL SECTION HEIGHT */
 #sabores {
-  height:100vh !important;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  height: 100vh !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* each slide full viewport */
 .carousel-slide {
-  height:100vh !important;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
+  height: 100vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
 #sabores video {
-  width:100%;
-  height:100% !important;
-  object-fit:cover;
-  display:block;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
 }
 
 
 /* adjust hero to 75vh and centered text */
 #sabores {
-  height:75vh !important;
+  height: 75vh !important;
 }
 .carousel-slide {
-  height:75vh !important;
-
+  height: 75vh !important;
   position: relative;
 }
 #sabores .text-area, #sabores h2, #sabores p {
-  align-self:center;
+  align-self: center;
 }
 
 
 
 /* vidro negro obrigatório */
-.carousel-slide::before {content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);backdrop-filter:blur(4px);z-index:1;}
-.sabores-content-overlay, .sabores-content-overlay * {position:relative;z-index:3 !important;}
+.carousel-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+.sabores-content-overlay, .sabores-content-overlay * {
+  position: relative;
+  z-index: 3 !important;
+}
 
 /* === FIX: vidro por slide, sem blur e sem bug de empilhamento === */
-.sabores::after { display: none !important; } /* desativa overlay do section que cobria o texto após navegação */
-.carousel-slide { position: relative; z-index: 0; }
+.sabores::after { 
+  display: none !important; 
+} /* desativa overlay do section que cobria o texto após navegação */
+.carousel-slide { 
+  position: relative; 
+  z-index: 0; 
+}
 .carousel-slide::before {
   content: '';
   position: absolute;
@@ -539,8 +565,10 @@ section {
   position: relative;
   z-index: 3 !important; /* garante texto acima do vidro */
 }
-.sabores-bg-video { z-index: 0 !important; } /* vídeo sempre no fundo */
+.sabores-bg-video { 
+  z-index: 0 !important; 
+} /* vídeo sempre no fundo */
 /* botões sempre acima de tudo */
-.carousel-btn { z-index: 4 !important; }
-
-
+.carousel-btn { 
+  z-index: 4 !important; 
+}
