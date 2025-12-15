@@ -134,8 +134,9 @@ section {
   justify-content: center;
   text-align: center;
   padding-top: 80px; /* Compensa a navbar fixa */
+  /* CORREÇÃO AQUI: Mudando para um nome de imagem (.png) para evitar problemas de compatibilidade */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('assets/img/batata.mp4') no-repeat center center/cover;
+    url('assets/img/batata_hero.png') no-repeat center center/cover;
 }
 
 .hero h2 {
@@ -154,7 +155,7 @@ section {
 }
 
 /* ======================================= */
-/* ✅ SEÇÃO "SOBRE NÓS" (Mantida)         */
+/* ✅ SEÇÃO "SOBRE NÓS" (Mantida)          */
 /* ======================================= */
 .sobre {
   background-color: #1a1a1a;
@@ -201,11 +202,6 @@ section {
 }
 
 /* ======================================= */
-/* ❌ BLOCO ANTIGO DO "SABORES" REMOVIDO   */
-/* ======================================= */
-
-
-/* ======================================= */
 /* ✅ NOVOS ESTILOS - SEÇÃO SABORES (MINI-HERO) */
 /* ======================================= */
 .sabores {
@@ -234,7 +230,7 @@ section {
   min-height: 100%;
   width: auto;
   height: auto;
-   /* Atrás do overlay */
+    /* Atrás do overlay */
   object-fit: cover;
 
   z-index:0;
@@ -273,7 +269,7 @@ section {
   margin-bottom: 1rem;
 }
 /* ======================================= */
-/* FIM DOS NOVOS ESTILOS                 */
+/* FIM DOS NOVOS ESTILOS                   */
 /* ======================================= */
 
 
@@ -372,11 +368,6 @@ section {
     max-width: 350px; /* Limita o tamanho da imagem no mobile */
   }
   /* FIM DAS ADIÇÕES RESPONSIVAS */
-
-
-  /* ======================================= */
-  /* ❌ REGRAS RESPONSIVAS ANTIGAS REMOVIDAS  */
-  /* ======================================= */
 
 
   /* ================================================ */
@@ -542,5 +533,3 @@ section {
 .sabores-bg-video { z-index: 0 !important; } /* vídeo sempre no fundo */
 /* botões sempre acima de tudo */
 .carousel-btn { z-index: 4 !important; }
-
-
