@@ -154,7 +154,15 @@
       <h2 class="wow animate__fadeInUp" data-wow-delay="0.2s">QUER SER NOSSO PARCEIRO?</h2>
       <p class="wow animate__fadeInUp" data-wow-delay="0.4s">Leve a BATATA'S & BATATA'S para o seu estabelecimento. Preencha o formulário abaixo.</p>
 
-      <form id="contact-form" class="contact-form wow animate__fadeIn" data-wow-delay="0.6s">
+      <form id="contact-form" class="contact-form wow animate__fadeIn" data-wow-delay="0.6s" 
+            action="https://formsubmit.co/contato@batatasebatatas.com.br" method="POST">
+        
+        <input type="hidden" name="_subject" value="CONTATO PELO SITE - ATENÇÃO">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_next" value="https://batatasebatatas.com.br/obrigado.html"> 
+        <input type="text" name="_honey" style="display:none">
+        
         <div class="form-group">
           <label for="name">Seu Nome</label>
           <input type="text" id="name" name="name" required>
